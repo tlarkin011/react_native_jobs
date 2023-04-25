@@ -13,6 +13,7 @@ const NearbyJobCard = ({ job, handleNavigate }) => {
       <TouchableOpacity style={styles.logoContainer}>
         <Image
           source={{
+            // api doesn't pull images super well, replacment photo supplied if not found.
             uri: checkImageURL(job.employer_logo)
               ? job.employer_logo
               : "https://t4.ftcdn.net/jpg/05/05/61/73/360_F_505617309_NN1CW7diNmGXJfMicpY9eXHKV4sqzO5H.jpg",

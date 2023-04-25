@@ -18,6 +18,7 @@ const Nearbyjobs = () => {
 
   
   const router = useRouter();
+  // nearby jobs is below pop jobs on router
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -28,12 +29,14 @@ const Nearbyjobs = () => {
       </View> 
 
       <View style={styles.cardsContainer}>
+        
         {isLoading ?(
           <ActivityIndicator size='large'  colors={COLORS.primary}/>
         ) : error ? (
           <Text>Something went wrong</Text>
         ) : (
           data?.map((job) =>{
+            // maping data and proping it out to card element. 
             <NearbyJobCard 
               job={job}
               key={`nearby-job-${job?.job_id}`}

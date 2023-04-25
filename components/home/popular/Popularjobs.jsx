@@ -8,6 +8,8 @@ import { COLORS, SIZES } from '../../../constants'
 import PopularJobCard from '../../common/cards/popular/PopularJobCard'
 import useFetch from "../../../hook/useFetch"
 
+
+// auto query is set to "react dev"
 const Popularjobs = () => {
 
   const { data, isLoading, error } = useFetch
@@ -23,7 +25,7 @@ const Popularjobs = () => {
     setSelectedJob(item.job_id);
   };
 
-  
+  // container fro popular jobs.  data is being retrived from usefetch API call in useFetch.js
   const router = useRouter();
   return (
     <View style={styles.container}>
